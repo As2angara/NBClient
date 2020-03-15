@@ -1,0 +1,10 @@
+<section id = "menu-item-container">
+  <div *ngFor = "let menuItem of menuItems$ | async" class = "item-cont">
+    <div *ngIf = "menuItem.catid === catId">
+      <app-menu-item [menuItem]="menuItem" ></app-menu-item>
+    </div>
+  </div>
+</section>
+
+
+
