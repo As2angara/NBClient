@@ -1,0 +1,71 @@
+header {
+  background-image: url("src/assets/images/front background2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x:hidden;
+  overflow: hidden;
+}
+
+.head-container {
+  width: 50%;
+  height: auto;
+  background: rgba(17,17,17,0.5);
+  text-align: center;
+  font-family: 'Italiana';
+  line-height: 80%;
+  padding:20px;
+  border-radius: 15%;
+  margin: 15% auto;
+}
+
+.intro {
+  font-size: 22px;
+}
+
+.col1 {
+  color: white;
+}
+
+.name {
+  font-size: 80px;
+}
+
+.col2 {
+  color: #64D622;
+}
+
+@media screen and (max-width: 875px) {
+  .head-container p {
+    font-size: 19.8px;
+  }
+
+  .head-container h1 {
+    font-size: 72px;
+  }
+
+  .head-container h3 {
+    font-size: 19.8px;
+    line-height: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .head-container {
+    margin-top: 25%;
+    margin-bottom: 10%;
+  }
+
+  .head-container p {
+    font-size: 14px;
+  }
+
+  .head-container h1 {
+    font-size: 60px;
+  }
+
+  .head-container h3 {
+    font-size: 14px;
+    line-height: 100%;
+  }
+}
