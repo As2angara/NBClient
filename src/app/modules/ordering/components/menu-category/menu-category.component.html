@@ -1,3 +1,7 @@
+<div *ngFor = "let menuItem of menuItems$ | async">
+  <div *ngIf = "menuItem.catid === catId">
+    <app-menu-item [menuItem]="menuItem" ></app-menu-item>
+  </div>
+</div>
 
-<h1>title</h1>
-<app-menu-item></app-menu-item>
+
