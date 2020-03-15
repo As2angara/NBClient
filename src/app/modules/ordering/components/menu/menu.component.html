@@ -1,1 +1,10 @@
-<p>menu works!</p>
+
+<section id = "menu">
+  <div *ngFor = "let menucat of menuCategories$ | async">
+    <div *ngIf = "(menuItems$ | async)">
+      <h1>{{menucat.name}}</h1>
+      <app-menu-category [catId] = "menucat.id" [menuItems$] = "menuItems$"></app-menu-category>
+    </div>
+  </div>
+</section>
+
