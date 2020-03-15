@@ -3,18 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {OrderingModule} from './modules/ordering/ordering.module';
+import { LandingModule } from './modules/landing/landing.module';
+import { NavigationbarComponent } from './components/navigationbar/navigationbar.component';
+// import { SectionSeparatorComponent } from './components/section-separator/section-separator.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavigationbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    OrderingModule
+    LandingModule
   ],
   providers: [],
+  exports: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
