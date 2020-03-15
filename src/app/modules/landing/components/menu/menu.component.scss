@@ -1,0 +1,782 @@
+/* --------------------------- Menu Section ------------------------- */
+
+/* ================ Section Settings ============== */
+#section2 {
+  width:100%;
+  height: auto;
+  margin:0;
+}
+
+/* ================ Menu Section title head ========== */
+.sect-title {
+  width: 60%;
+  height: 250px;
+  background: rgba(17,17,17,0.8);
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sect-title h1 {
+  color: white;
+  margin:0;
+  font-family: 'Italiana';
+  font-size: 60px;
+}
+
+.sect-title p {
+  color: white;
+  margin:0;
+  font-family: 'Italiana';
+  font-size: 30px;
+}
+
+@media screen and (max-width: 950px) {
+  .sect-title {
+    width: 60%;
+  }
+
+  .sect-title h1 {
+    font-size: 48px;
+  }
+
+  .sect-title p {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sect-title {
+    width: 100%;
+  }
+}
+
+/* =============== Menu bars - entrees =============== */
+.entrees {
+  width: 80%;
+  height: 480px;
+  margin: auto;
+  margin-top: 100px;
+  background-color: white;
+  position: relative;
+  box-shadow: 5px 5px 5px black;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr [col-start]);
+  grid-template-rows: repeat(5, 1fr [row-start]);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.entr-pic {
+  background-image: url("src/assets/images/penne-pasta.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 5;
+}
+
+.entr-title {
+  border-bottom: 1px solid black;
+  grid-column: 4 / span 6;
+  grid-row: 1 / span 1;
+  margin-right: 15px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.entr-title h1 {
+  font-family: 'Italiana';
+  margin: 0;
+  font-size: 55px;
+}
+
+.e-food {
+  grid-column: 4 / span 6;
+  grid-row: 2 / span 4;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr [col-start]);
+  grid-template-rows: repeat(4, 1fr [row-start]);
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+}
+
+.e-food1 {
+  grid-column: 1 /span 2;
+  grid-row: 1 / span 4;
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px black;
+}
+
+.e-food2 {
+  grid-column: 3 /span 2;
+  grid-row: 1 /span 4;
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px black;
+}
+
+.e-food3 {
+  grid-column: 5 /span 2;
+  grid-row: 1/ span 4;
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px black;
+}
+
+.e-temp {
+  height: 175px;
+  width: 95%;
+  margin: 5px auto;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.e-temp-desc {
+  height: 183px;
+  width: 100%;
+  border-top: 1px solid black;
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.e-temp-desc p {
+  margin: 0 15px 15px 15px;
+}
+
+.prev1 {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  left: 0;
+  padding: 10px 16px;
+  cursor: pointer;
+  bottom: 183px;
+  display: none;
+}
+
+.prev1:hover {
+  opacity: 0.5;
+}
+
+.next1 {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  right: 0;
+  padding: 10px 16px;
+  cursor: pointer;
+  bottom: 183px;
+  display: none;
+}
+
+.next1:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 950px) {
+  .entr-pic {
+    display: none;
+  }
+
+  .e-food {
+    grid-column: 1 / span 9;
+    margin-left: 15px;
+  }
+
+  .entr-title {
+    grid-column: 1 /span 9;
+    margin-left: 15px;
+  }
+
+  .entr-title h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .entrees {
+    width: 100%;
+  }
+
+  .e-food1 {
+    grid-column: 2 /span 4;
+    display: none;
+  }
+
+  .e-food2 {
+    grid-column: 2 /span 4;
+    display: none;
+  }
+
+  .e-food3 {
+    grid-column: 2 /span 4;
+    display: none;
+  }
+
+  .e-temp-desc {
+    justify-content: flex-start;
+  }
+
+  .e-temp img {
+    width: 122px;
+    height: 60px;
+  }
+
+  .next1 {
+    display: block;
+  }
+
+  .prev1 {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .e-temp-desc h4,
+  .e-temp-desc p {
+    font-size: 13px;
+  }
+
+  .entr-title h1 {
+    font-size: 45px;
+  }
+}
+
+/* ================ Menu bars - sides ================= */
+.sides {
+  width: 80%;
+  height: 480px;
+  margin: auto;
+  margin-top: 100px;
+  background-color: white;
+  position: relative;
+  box-shadow: 5px 5px 5px black;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr [col-start]);
+  grid-template-rows: repeat(5, 1fr [row-start]);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.sid-pic {
+  background-image: url("src/assets/images/french-fries.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 7 / span 3;
+  grid-row: 1 / span 5;
+}
+
+.sid-title {
+  border-bottom: 1px solid black;
+  grid-column: 1 / span 6;
+  grid-row: 1 / span 1;
+  margin-left: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.sid-title h1 {
+  font-family: 'Italiana';
+  margin: 0;
+  font-size: 55px;
+}
+
+.s-food {
+  grid-column: 1 / span 6;
+  grid-row: 2 / span 4;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr [col-start]);
+  grid-template-rows: repeat(4, 1fr [row-start]);
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+}
+
+.s-food1 {
+  box-shadow: 3px 3px 3px black;
+  border: 1px solid black;
+  grid-column: 1 /span 2;
+  grid-row: 1 / span 4;
+}
+
+.s-food2 {
+  box-shadow: 3px 3px 3px black;
+  border: 1px solid black;
+  grid-column: 3 /span 2;
+  grid-row: 1 /span 4;
+}
+
+.s-food3 {
+  box-shadow: 3px 3px 3px black;
+  border: 1px solid black;
+  grid-column: 5 /span 2;
+  grid-row: 1/ span 4;
+}
+
+.s-temp {
+  height: 175px;
+  width: 95%;
+  margin: 5px auto;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.s-temp-desc {
+  height: 183px;
+  width: 100%;
+  border-top: 1px solid black;
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.s-temp-desc p {
+  margin: 0 15px 15px 15px;
+}
+
+.prev2 {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  left: 0;
+  padding: 10px 16px;
+  cursor: pointer;
+  bottom: 183px;
+  display: none;
+}
+
+.prev2:hover {
+  opacity: 0.5;
+}
+
+.next2 {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  right: 0;
+  padding: 10px 16px;
+  cursor: pointer;
+  bottom: 183px;
+  display: none;
+}
+
+.next2:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 950px) {
+  .sid-pic {
+    display: none;
+  }
+
+  .s-food {
+    grid-column: 1 / span 9;
+    margin-right: 15px;
+  }
+
+  .sid-title {
+    grid-column: 1 /span 9;
+    margin-right: 15px;
+    justify-content: flex-start;
+  }
+
+  .sid-title h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sides {
+    width: 100%;
+  }
+
+  .s-food1 {
+    grid-column: 2 /span 4;
+    display: none;
+  }
+
+  .s-food2 {
+    grid-column: 2 /span 4;
+    display: none;
+  }
+
+  .s-food3 {
+    grid-column: 2 /span 4;
+    display: none;
+  }
+
+  .s-temp-desc {
+    justify-content: flex-start;
+  }
+
+  .s-temp img {
+    width: 122px;
+    height: 60px;
+  }
+
+  .next2 {
+    display: block;
+  }
+
+  .prev2 {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .s-temp-desc h4,
+  .s-temp-desc p {
+    font-size: 13px;
+  }
+
+  .sid-title h1 {
+    font-size: 45px;
+  }
+}
+
+/* =============== Menu bars - desserts =============== */
+.desserts {
+  width: 80%;
+  height: 480px;
+  margin: auto;
+  margin-top: 100px;
+  background-color: white;
+  position: relative;
+  box-shadow: 5px 5px 5px black;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr [col-start]);
+  grid-template-rows: repeat(5, 1fr [row-start]);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.dess-pic {
+  background-image: url("src/assets/images/choco-cake.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 5;
+}
+
+.dess-title {
+  border-bottom: 1px solid black;
+  grid-column: 4 / span 6;
+  grid-row: 1 / span 1;
+  margin-right: 15px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.dess-title h1 {
+  font-family: 'Italiana';
+  margin: 0;
+  font-size: 55px;
+}
+
+.d-food {
+  grid-column: 4 / span 6;
+  grid-row: 2 / span 4;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr [col-start]);
+  grid-template-rows: repeat(4, 1fr [row-start]);
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+}
+
+.d-food1 {
+  box-shadow: 3px 3px 3px black;
+  border: 1px solid black;
+  grid-column: 1 /span 2;
+  grid-row: 1 / span 4;
+}
+
+.d-food2 {
+  box-shadow: 3px 3px 3px black;
+  border: 1px solid black;
+  grid-column: 3 /span 2;
+  grid-row: 1 /span 4;
+}
+
+.d-food3 {
+  box-shadow: 3px 3px 3px black;
+  border: 1px solid black;
+  grid-column: 5 /span 2;
+  grid-row: 1/ span 4;
+}
+
+.d-temp {
+  height: 175px;
+  width: 95%;
+  margin: 5px auto;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-temp-desc {
+  height: 183px;
+  width: 100%;
+  border-top: 1px solid black;
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-temp-desc p {
+  margin: 0 15px 15px 15px;
+}
+
+.prev3 {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  left: 0;
+  padding: 10px 16px;
+  cursor: pointer;
+  bottom: 183px;
+  display: none;
+}
+
+.prev3:hover {
+  opacity: 0.5;
+}
+
+.next3 {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  right: 0;
+  padding: 10px 16px;
+  cursor: pointer;
+  bottom: 183px;
+  display: none;
+}
+
+.next3:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 950px) {
+  .dess-pic {
+    display: none;
+  }
+
+  .d-food {
+    grid-column: 1 / span 9;
+    margin-left: 15px;
+  }
+
+  .dess-title {
+    grid-column: 1 /span 9;
+    margin-left: 15px;
+  }
+
+  .dess-title h1 {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .desserts {
+    width: 100%;
+  }
+
+  .d-food1 {
+    grid-column: 2 /span 4;
+    display: none;
+  }
+
+  .d-food2 {
+    grid-column: 2 /span 4;
+    display: none;
+  }
+
+  .d-food3 {
+    grid-column: 2 /span 4;
+    display: none;
+  }
+
+  .d-temp-desc {
+    justify-content: flex-start;
+  }
+
+  .d-temp img {
+    width: 122px;
+    height: 60px;
+  }
+
+  .next3 {
+    display: block;
+  }
+
+  .prev3 {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .d-temp-desc h4,
+  .d-temp-desc p {
+    font-size: 13px;
+  }
+
+  .dess-title h1 {
+    font-size: 40px;
+  }
+}
+
+/* =========== Menu bars - full menu option ========== */
+
+.full-menu-cont {
+  width: 100%;
+  height: 330px;
+  background-color: rgb(213 69 60);
+  margin-top: 100px;
+}
+
+.container-of-fullmenu-content {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr [col-start]);
+  grid-template-rows: repeat(4, 1fr [row-start]);
+}
+
+.icon-cont {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
+}
+
+.click-for-full {
+  grid-column: 2 / span 3;
+  grid-row: 2 / span 2;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.click-for-full h1 {
+  margin: 0;
+  font-family: 'Italiana';
+  font-size: 40px;
+  color: white;
+}
+
+.button-cont {
+  grid-column: 5 / span 1;
+  grid-row: 2 / span 2;
+  text-align: center;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-button {
+  font-family: 'Fjalla One', sans-serif;
+  padding: 20px 40px;
+  background-color: white;
+  color: rgb(213 69 60);
+  font-size: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  color: white;
+  background-color: #111;
+  opacity: 0.8;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 1210px) {
+  .click-for-full h1 {
+    font-size: 30px;
+  }
+
+  .menu-button {
+    font-size: 24px;
+    padding: 15px 30px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .icon-cont {
+    display: none;
+  }
+
+  .click-for-full {
+    grid-column: 1 /span 4;
+    justify-content: flex-start;
+  }
+
+  .click-for-full h1 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-of-fullmenu-content {
+    width: 100%;
+  }
+
+  .click-for-full {
+    grid-column: 2 / span 3;
+    grid-row: 1 / span 2;
+    align-items: flex-end;
+  }
+
+  .button-cont {
+    grid-column: 2 / span 3;
+    grid-row: 3 / span 2;
+
+    justify-content: center;
+  }
+
+  .menu-button {
+    padding: 20px 40px;
+    font-size: 30px;
+  }
+}

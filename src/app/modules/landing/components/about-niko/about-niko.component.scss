@@ -1,0 +1,257 @@
+/* --------------------------- About us section ---------------------- */
+
+/* ============= Section settings ================== */
+#section1 {
+  width: 100%;
+  height: auto;
+  background-color: #F7F7F7;
+  background-size: 100%;
+  margin: 0;
+}
+
+/* ========= Section seperating header ============ */
+.section-cont {
+  width:100%;
+  height: 80px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-symbol {
+  height: 75px;
+  width: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .section-cont {
+    height: 60px;
+  }
+
+  .section-symbol {
+    height: 56.25px;
+  }
+}
+
+/* ====== About paragraph and picture container ===== */
+.about-us-cont {
+  width: 80%;
+  height: 700px;
+  background-color: white;
+  margin:auto;
+  margin-top: 50px;
+  position: relative;
+  box-shadow: 5px 5px 5px grey;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr [col-start]);
+  grid-template-rows: repeat(5, 1fr [row-start]);
+}
+
+.pic-cont {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 5;
+  background-image: url("src/assets/images/front background3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.about-paragraph-cont {
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 5;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr [col-start]);
+  grid-template-rows: repeat(5, 1fr [row-start]);
+
+}
+
+.about-paragraph-cont-inner {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 3;
+
+  text-align: center;
+  padding: 0 5%;
+}
+
+.about-paragraph-cont-inner h1 {
+  font-family: 'Italiana';
+  font-size: 50px;
+  color: black;
+}
+
+.about-paragraph-cont-inner p {
+  font-size: 16px;
+  font-family: Verdana, Geneva, sans-serif;
+  color: grey;
+}
+
+.store-hours {
+  grid-column: 1 / span 3;
+  grid-row: 4 / span 2;
+  position: relative;
+  padding-left: 5%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.store-hours h1 {
+  font-family: 'Italiana';
+  color: black;
+  position: absolute;
+  top: 0;
+  font-size: 50px;
+  margin-top: 0;
+}
+
+.days {
+  margin-right: 50px;
+}
+
+.days p {
+  background-color: rgb(213 69 60);;
+  border-radius: 4px;
+  font-family: Verdana, Geneva, sans-serif;
+  padding: 4px 16px;
+  margin: 6px 0;
+  font-size: 17px;
+  color: white
+}
+
+.time p {
+  border: 1px solid rgb(213 69 60);
+  border-radius: 4px;
+  font-family: Verdana, Geneva, sans-serif;
+  padding: 4.5px 16px;
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 875px) {
+  .pic-cont {
+    display: none;
+  }
+
+  .about-paragraph-cont {
+    grid-column: 1 / span 3;
+  }
+
+  .about-paragraph-cont h1 {
+    font-size: 45px;
+  }
+
+  .about-paragraph-cont p {
+    font-size: 14.4px;
+  }
+
+  .store-hours h1 {
+    font-size: 45px;
+  }
+
+  .time p {
+    padding: 3px 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-us-cont {
+    width: 100%;
+  }
+
+  .about-paragraph-cont h1 {
+    font-size: 41px;
+  }
+
+  .about-paragraph-cont p {
+    font-size: 13px;
+  }
+
+  .store-hours h1 {
+    font-size: 41px;
+  }
+}
+
+#call-us-cont {
+  width: 70%;
+  height: 250px;
+  margin: auto;
+  margin-top: 150px;
+  background-color: rgb(213 69 60);
+  position: relative;
+  bottom: 50px;
+  box-shadow: 5px 5px 5px grey;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr [col-start]);
+  grid-template-rows: repeat(3, 1fr [row-start]);
+}
+
+.daily-special {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  background-color: rgb(70 70 70);
+  font-family: Verdana, Geneva, sans-serif; font-size: 20px;
+  color: #BFBFBF;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.daily-special p {
+  margin: 8px 0;
+  margin-left: 25%;
+}
+
+#phone-num1 {
+  grid-column: 1 / span 6;
+  grid-row: 1 / span 3;
+  font-family: Verdana, Geneva, sans-serif;
+  color: white;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#phone-num1 p {
+  margin-left: 250px;
+}
+
+#phone-num1 h1 {
+  font-size: 35px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  margin-left: 250px;
+}
+
+@media screen and (max-width: 875px){
+  .daily-special {
+    display: none;
+  }
+
+  #phone-num1 {
+    grid-column: 1 / span 6;
+  }
+
+  #phone-num1 h1,
+  #phone-num1 p {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #call-us-cont {
+    width: 100%;
+  }
+
+  #phone-num1 h1 {
+    font-size: 30px;
+  }
+}
