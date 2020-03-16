@@ -9,13 +9,13 @@ import { NavigationbarComponent } from './components/navigationbar/navigationbar
 
 
 import {OrderingModule} from './modules/ordering/ordering.module';
-// import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-// import {MatDialogModule} from '@angular/material/dialog';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationbarComponent
+    NavigationbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
