@@ -10,6 +10,7 @@ import { NavigationbarComponent } from './components/navigationbar/navigationbar
 
 import {OrderingModule} from './modules/ordering/ordering.module';
 import { FooterComponent } from './components/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     LandingModule,
-    OrderingModule
+    OrderingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   exports: [

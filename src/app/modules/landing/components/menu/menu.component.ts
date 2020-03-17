@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import {OrderDashboardComponent} from '../../../ordering/components/order-dashboard/order-dashboard.component';
-// import {MatDialog} from '@angular/material/dialog';
+/*import {OrderDashboardComponent} from '../../../ordering/components/order-dashboard/order-dashboard.component';*/
+
 
 @Component({
   selector: 'app-menu-landing',
