@@ -10,7 +10,6 @@ import { NavigationbarComponent } from './components/navigationbar/navigationbar
 
 import {OrderingModule} from './modules/ordering/ordering.module';
 import { FooterComponent } from './components/footer/footer.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     LandingModule,
     OrderingModule,
-    NoopAnimationsModule,
   ],
   providers: [],
   exports: [
