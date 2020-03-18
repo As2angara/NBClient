@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-/*import {OrderDashboardComponent} from '../../../ordering/components/order-dashboard/order-dashboard.component';*/
-
+import {OrderDashboardComponent} from '../../../ordering/components/order-dashboard/order-dashboard.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-menu-landing',
@@ -9,16 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(/*private dialog: MatDialog*/) { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
- // openOrderDashboard() {
- //   this.dialog.open(OrderDashboardComponent, {
- //     height: '400px',
- //     width: '600px',
- //   });
- //  }
+ openOrderDashboard() {
+   this.dialog.open(OrderDashboardComponent, {
+     height: '400px',
+     width: '600px',
+   });
+  }
 
 }
