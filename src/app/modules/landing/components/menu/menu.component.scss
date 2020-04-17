@@ -59,9 +59,11 @@
 .food-card {
   width: 80%;
   height: 480px;
-  margin: auto;
+  margin: 30px auto;
   background-color: white;
   box-shadow: 5px 5px 5px black;
+
+
 }
 
 .food-card1 {
@@ -89,21 +91,25 @@
   grid-area: pic;
 }
 
-.pic1 {
+.pic0 {
   background-image: url("src/assets/images/penne-pasta.jpg");
 }
 
-.pic2 {
+.pic1 {
   background-image: url("src/assets/images/french-fries.jpeg");
 }
 
-.pic3 {
+.pic2 {
   background-image: url("src/assets/images/choco-cake.jpg");
 }
 
 .food {
   grid-area: food;
   padding: 0 20px;
+
+  &-inner {
+    display: flex;
+  }
 }
 
 .title {
@@ -121,6 +127,8 @@
 
 .card-cont {
   padding: 20px 0;
+  margin-right: 15px;
+
 }
 
 .card {
@@ -139,8 +147,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
 
   }
+
+  p {
+    color: grey;
+  }
+
 }
 
 
