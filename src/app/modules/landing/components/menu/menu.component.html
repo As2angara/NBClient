@@ -16,22 +16,26 @@
         <h1>{{cat.name}}</h1>
       </div>
 
-      <div  *ngFor = "let item of items$ | async; let i = index" >
-        <div class = "card-cont" *ngIf = "i < 3">
-          <div class = "card">
-            <div class = "card__img">
-              <img src="../../assets/images/logo2.png" alt = "temp picture">
+      <div class = "food-inner">
+        <div  *ngFor = "let item of items$ | async; let i = index" >
+          <div class = "card-cont" *ngIf = "i < 3">
+            <div class = "card">
+              <div class = "card__img">
+                <img src="../../assets/images/logo2.png" alt = "temp picture">
+              </div>
+
+              <p>{{item.name}}</p>
+              <p>{{item.desc}}</p>
+              <p>{{item.price | currency}}</p>
             </div>
 
-            <p>{{item.name}}</p>
-            <p>{{item.desc}}</p>
-            <p>{{item.price}}</p>
+            <div class = "prev1">&#10094;</div>
+            <div class = "next1">&#10095;</div>
           </div>
-
-          <div class = "prev1">&#10094;</div>
-          <div class = "next1">&#10095;</div>
         </div>
       </div>
+
+
     </div>
   </div>
 
