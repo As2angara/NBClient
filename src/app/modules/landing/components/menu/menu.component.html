@@ -1,150 +1,41 @@
 <!-- Menu Section -->
+<app-section-separator></app-section-separator>
 <div id="section2">
-  <app-section-separator></app-section-separator>
+
   <div class = "sect-title">
     <h1> Menu Favourites</h1>
     <p>Experience our specialty food</p>
   </div>
 
-  <div class = "entrees">
-    <div class = "entr-pic"></div>
+  <div [ngClass] = "{'food-card food-card1': true}"
+      *ngFor = "let cat of categories; let i = index;">
+    <div class = "pic pic{{i}}"></div>
 
-    <div class = "entr-title">
-      <h1>Classic Entrées</h1>
-    </div>
+    <div class = "food">
+      <div class = "title">
+        <h1>{{cat.name}}</h1>
+      </div>
 
-    <div class = "e-food">
-      <div class = "e-food1 entr">
-        <div class = "e-temp">
-          <img src="../../assets/images/logo2.png" alt = "temp picture">
-        </div>
+      <div class = "food-inner">
+        <div  *ngFor = "let item of items$ | async; let i = index" >
+          <div class = "card-cont" *ngIf = "i < 3">
+            <div class = "card">
+              <div class = "card__img">
+                <img src="../../assets/images/logo2.png" alt = "temp picture">
+              </div>
 
-        <div class = "e-temp-desc">
-          <h3>Penne Pasta</h3>
-          <p>trip steak turducken duis ipsum chuck landjaeger</p>
-          <p>$8.99</p>
+              <p>{{item.name}}</p>
+              <p>{{item.desc}}</p>
+              <p>{{item.price | currency}}</p>
+            </div>
+
+            <div class = "prev1">&#10094;</div>
+            <div class = "next1">&#10095;</div>
+          </div>
         </div>
       </div>
 
-      <div class = "e-food2 entr">
-        <div class = "e-temp">
-          <img src="../../assets/images/logo2.png" alt = "temp picture">
-        </div>
 
-        <div class = "e-temp-desc">
-          <h3>Panzerotti</h3>
-          <p>trip steak turducken duis ipsum chuck landjaeger</p>
-          <p>$7.99</p>
-        </div>
-      </div>
-
-      <div class = "e-food3 entr">
-        <div class = "e-temp">
-          <img src="../../assets/images/logo2.png" alt = "temp picture">
-        </div>
-
-        <div class = "e-temp-desc">
-          <h3>Cheese Pizza</h3>
-          <p>Nulla mollit pig ground round. Fatback velit id</p>
-          <p>$8.99</p>
-        </div>
-      </div>
-
-      <div class = "prev1">&#10094;</div>
-      <div class = "next1">&#10095;</div>
-    </div>
-  </div>
-
-  <div class = "sides">
-    <div class = "sid-pic"></div>
-
-    <div class = "sid-title">
-      <h1>Savoury Sides</h1>
-    </div>
-
-    <div class = "s-food">
-      <div class = "s-food1 side">
-        <div class = "s-temp">
-          <img src="../../assets/images/logo2.png" alt = "temp picture">
-        </div>
-        <div class = "s-temp-desc">
-          <h3> Poutine</h3>
-          <p> Doner pork loin alcatra chicken Boudin fatback.</p>
-          <p>$5.99</p>
-        </div>
-      </div>
-
-      <div class = "s-food2 side">
-        <div class = "s-temp">
-          <img src="../../assets/images/logo2.png" alt = "temp picture">
-        </div>
-        <div class = "s-temp-desc">
-          <h3>Side Salad</h3>
-          <p>trip steak turducken duis ipsum chuck landjaeger</p>
-          <p>$3.99</p>
-        </div>
-      </div>
-
-      <div class = "s-food3 side">
-        <div class = "s-temp">
-          <img src="../../assets/images/logo2.png" alt = "temp picture">
-        </div>
-        <div class = "s-temp-desc">
-          <h3>Soup of the Day</h3>
-          <p>trip steak turducken duis ipsum chuck landjaeger</p>
-          <p>$3.99</p>
-        </div>
-      </div>
-
-      <div class = "prev2">&#10094;</div>
-      <div class = "next2">&#10095;</div>
-    </div>
-  </div>
-
-  <div class = "desserts">
-    <div class = "dess-pic"></div>
-
-    <div class = "dess-title">
-      <h1>Decadent Desserts</h1>
-    </div>
-
-    <div class = "d-food">
-
-      <div class = "d-food1 dess">
-        <div class = "d-temp">
-          <img src="../../assets/images/logo2.png" alt = "temp picture">
-        </div>
-        <div class = "d-temp-desc d1">
-          <h3>Pineapple cake</h3>
-          <p>Doner pork loin alcatra chicken Boudin fatback.</p>
-          <p>$2.99</p>
-        </div>
-      </div>
-
-      <div class = "d-food2 dess">
-        <div class = "d-temp">
-          <img src="../../assets/images/logo2.png" alt = "temp picture">
-        </div>
-        <div class = "d-temp-desc d2">
-          <h3>Gelato</h3>
-          <p>Nulla mollit pig ground round. Fatback velit id</p>
-          <p>$2.99</p>
-        </div>
-      </div>
-
-      <div class = "d-food3 dess">
-        <div class = "d-temp">
-          <img src="../../assets/images/logo2.png" alt = "temp picture">
-        </div>
-        <div class = "d-temp-desc d3">
-          <h3>Cannoli</h3>
-          <p>trip steak turducken duis ipsum chuck landjaeger</p>
-          <p>$1.99</p>
-        </div>
-      </div>
-
-      <div class = "prev3">&#10094;</div>
-      <div class = "next3">&#10095;</div>
     </div>
   </div>
 
@@ -154,7 +45,7 @@
         <img src="../../assets/images/plate-icon.png" alt = "plate image">
       </div>
       <div class = "click-for-full">
-        <h1>To see our full menu, click here!</h1>
+        <h1>To see our full menu click here!</h1>
       </div>
       <div class = "button-cont">
        <div class = "menu-button" (click) = "openOrderDashboard()">View Now</div>
@@ -162,3 +53,4 @@
     </div>
   </div>
 </div>
+<app-section-separator></app-section-separator>
