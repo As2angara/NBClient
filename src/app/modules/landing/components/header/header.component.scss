@@ -5,11 +5,19 @@ header {
   background-repeat: no-repeat;
   overflow-x:hidden;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
 }
 
 
 .head-container {
-  width: 50%;
+  width: 600px;
   height: auto;
   background: rgba(17,17,17,0.5);
   text-align: center;
@@ -17,7 +25,7 @@ header {
   line-height: 80%;
   padding:20px;
   border-radius: 15%;
-  margin: 15% auto;
+  margin: 10% auto;
 }
 
 .intro {
@@ -30,10 +38,31 @@ header {
 
 .name {
   font-size: 80px;
+  margin-top: 40px;
 }
 
 .col2 {
   color: #64D622;
+}
+
+.button-cont {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-button {
+  font-family: 'Fjalla One', sans-serif;
+  padding: 20px 40px;
+  background-color: rgb(213 69 60);
+  color: white;
+  font-size: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: grey;
+  }
 }
 
 @media screen and (max-width: 875px) {
