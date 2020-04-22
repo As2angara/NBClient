@@ -343,6 +343,22 @@
     font-size: 24px;
     padding: 15px 30px;
   }
+
+  food-card1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'food';
+  }
+
+  .food-card {
+    width: 900px;
+  }
+
+  .pic {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 950px) {
